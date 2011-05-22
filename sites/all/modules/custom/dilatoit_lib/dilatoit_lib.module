@@ -40,7 +40,7 @@ function _dilatoit_lib_add_links($permission) {
         $link = l(t('New Issue'), 'node/add/issue', array('query' => 'gids[]=' . $node->nid));
         break;
       case 'create book content':
-        $link = l(t('New Book'), 'node/add/book', array('query' => 'gids[]=' . $node->nid));
+        $link = l(t('New Book page'), 'node/add/book', array('query' => 'gids[]=' . $node->nid));
         break;
     }
   }
