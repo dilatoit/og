@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Add site tag.
+ */
+ 
+
+/**
+ * Implementation of hook_menu().
+ */
+function dilatoit_site_menu() {
+    $items['node/%site_nid/customer_potal'] = array(
+    'title' => 'Customer Potal',
+    'page arguments' => array(1),
+    'page callback' => 'dilatoit_site_get_site_tab',
+    'access callback' => 'user_access',
+    'type' => MENU_LOCAL_TASK,
+    '#weight' => -99,
+   );
+    $items['node/%site_nid/project_management'] = array(
+    'title' => 'Project management',
+    'page arguments' => array(1),
+    'page callback' => 'dilatoit_site_get_site_manage_tab',
+    'access callback' => 'user_access',
+    'type' => MENU_LOCAL_TASK,
+    '#weight' => -100,
+   );
+  return $items;
+} 
+
+function dilatoit_site_get_site_tab($site_id) {
+  $content;
+  $content .= l("Project Overview", "customer_portal/projects/$site_id").'<br>';
+  $content .= l("Issue Tracking", "customer_portal/mangement-issues/$site_id");
+  return $content;
+}
+
+function site_nid_load($arg) {
+  $node = node_load($arg);
+  if ($node->type == 'site')
+    return $node->nid;
+  return FALSE;
+}
+
+function dilatoit_site_get_site_manage_tab($site_id){
+  $content;
+  $content .= l("Project Status", "customer_portal/project_status/$site_id").'<br>';
+  $content .= l("Daily Tracking", "customer_portal/daily-tracking/$site_id");
+  return $content;
+}
+
+
+  	
+  	
