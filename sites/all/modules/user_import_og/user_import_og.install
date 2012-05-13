@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install and un-install database tables and values for the module User Import OG 
+ *
+ */
+
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function user_import_og_uninstall() {
+  variable_del('user_import_og_subscribe');
+  variable_del('user_import_og_template');
+}
+
