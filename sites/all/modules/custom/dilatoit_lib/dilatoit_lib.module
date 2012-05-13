@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file Main file of DilatoIT Library Module.
+ */
+
+/**
+ * Check user access by permission
+ */
+function _dilatoit_lib_add_links($permission) {
+
+  $link = '';
+
+  $node = menu_get_object('node');
+
+  if (user_access($permission)) {
+
+    switch ($permission) {
+      case 'create project content':
+        $link = l(t('Add Project'), 'node/add/project', array('query' => 'gids[]=' . $node->nid));
+        break;
+      case 'create management_issue content':
+        $link = l(t('Add Management Issue'), 'node/add/management-issue', array('query' => 'gids[]=' . $node->nid));
+        break;
+      case 'create query content':
+        $link = l(t('Add Query'), 'node/add/query', array('query' => 'gids[]=' . $node->nid));
+        break;
+    }
+  }
+
+  return $link;
+}
