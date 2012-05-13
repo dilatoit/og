@@ -890,7 +890,7 @@ background: #E6E6E6;
 }
 
 tr td, tr th {
-border:1px solid #bbb;
+/*border:1px solid #bbb;*/
 padding: 0 6px;
 }
 
