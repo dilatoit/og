@@ -18,6 +18,9 @@ function _dilatoit_lib_add_links($permission) {
       case 'create project content':
         $link = l(t('Add Project'), 'node/add/project', array('query' => 'gids[]=' . $node->nid));
         break;
+      case 'create product content':
+        $link = l(t('Add Product'), 'node/add/product', array('query' => 'gids[]=' . $node->nid));
+        break;
       case 'create management_issue content':
         $link = l(t('Add Management Issue'), 'node/add/management-issue', array('query' => 'gids[]=' . $node->nid));
         break;
