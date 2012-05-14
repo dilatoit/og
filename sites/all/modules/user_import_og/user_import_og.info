@@ -1,0 +1,12 @@
+name = User Import OG
+description = Add options for importing users into Organic Groups.
+dependencies[] = og
+dependencies[] = user_import
+package = Organic groups
+core = 6.x
+; Information added by drupal.org packaging script on 2011-11-27
+version = "6.x-1.2"
+core = "6.x"
+project = "user_import_og"
+datestamp = "1322417144"
+

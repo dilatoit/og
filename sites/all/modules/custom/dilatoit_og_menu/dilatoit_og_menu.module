@@ -1,0 +1,62 @@
+<?php
+/**
+ * @file Main file for dilatoit_og_menu module.
+ */
+
+/**
+ * Implement hook_block().
+ */
+function dilatoit_og_menu_block($op = 'list', $delta = 0, $edit = array()) {
+  if ($op == 'list') {
+    $blocks['og_menu'] = array(
+      'info' => t('OG Menu - (Dilato IT)')
+    );
+
+    return $blocks;
+  }
+  else if ($op == 'view') {
+
+    switch ($delta) {
+      case 'og_menu':
+        $block = array(
+          'subject' => t('Dilato IT OG Menu'),
+          'content' => dilatoit_og_menu_view(),
+        );
+        break;
+    }
+
+    return $block;
+  }
+}
+
+
+/**
+ * Show dilatoit og menu based on nid
+ */
+function dilatoit_og_menu_view() {
+  $output = '';
+
+  // Get args from URL
+  $arg = arg();
+//dsm($arg);
+
+  // Get object based on current path
+  $node = menu_get_object('node');
+//dsm($node);
+
+  // Define Dilato PM system path prefix
+  // eg. pm/%nid for PM section, km/%nid for KM section.
+  $og_item_array = array('pm', 'km', 'rm');
+
+  if ($node->type == 'site' || in_array($arg[0], $og_item_array)) {
+dsm('in');
+    $output .= '<ul>';
+    $output .=   '<li>' . l(t('Home'), '<front>') . '</li>';
+    $output .=   '<li>' . l(t('Project Management'), 'pm/' . $node->nid) . '</li>';
+    $output .=   '<li>' . l(t('Resource Management'), 'pm/' . $node->nid) . '</li>';
+    $output .=   '<li>' . l(t('Knowledge Management'), 'pm/' . $node->nid) . '</li>';
+    $output .= '</ul>';
+  }
+
+  return $output;
+}
