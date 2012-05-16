@@ -1376,7 +1376,7 @@ function og_forum_access_forum_page($tid = 0) {
     $user->og_groups = og_get_subscriptions($user->uid);
   }
   if ($tid != 0) {
-    og_forum_set_og_group_context_from_tid($tid);
+    //og_forum_set_og_group_context_from_tid($tid);
     $gid = og_forum_gid_from_tid($tid); 
     if ($gid) {
       	if (!(!empty($user->og_groups) && array_key_exists($gid, $user->og_groups)) && ($user->uid != 1) && !(user_access('administer forums')) && !og_forum_is_public($tid)) {	
