@@ -85,6 +85,15 @@
 .Yellow-status {
   background:#ffcf73;
 }
+.view-daily-tracking-list .views-field-body {
+  max-height:600px;
+  height:auto !important;
+  height:600px;
+  width:920px;
+  overflow:scroll;
+  border:1px solid #ccc;
+  padding:10px;
+}
 
 /*Node Edit Page Style*/
 
