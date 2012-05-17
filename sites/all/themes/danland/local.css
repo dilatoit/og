@@ -1,0 +1,135 @@
+/****************************/
+/* LOCAL CSS                */
+/****************************/
+
+/* User Login Page Style */
+
+#user-register,
+#user-login,
+#user-pass {
+  width:410px;
+  margin:0 auto;
+  border:1px solid #ccc;
+  border-bottom-color:#eee;
+  border-radius:5px;
+  padding:0 10px 10px;
+  color:#666;
+}
+#user-register .form-item,
+#user-login .form-item,
+#user-pass .form-item {
+  padding:5px;
+  border:1px solid #ccc;
+  border-bottom-color:#eee;
+  border-radius:3px;
+}
+#user-register .form-item input,
+#user-login .form-item input,
+#user-pass .form-item input {
+  border-color: #e8e8e8 #f0f0f0 #f8f8f8;
+  border-style: solid;
+  border-width: 2px;
+  padding: 2px;
+}
+#user-register .form-item input:focus,
+#user-login .form-item input:focus,
+#user-pass .form-item input:focus {
+  border-color:#aaccee;
+  color:#333;
+}
+
+/*Project Issues Style*/
+
+.view-project-detail {
+  border:1px solid #eee;
+  float:left;
+  padding:0 10px;
+}
+.view-project-detail label {
+  width:100px;
+  display:inline-block;
+}
+.view-project-detail .views-field-field-project-attachments-fid div {
+  display:inline;
+}
+.view-project-detail .views-field-field-project-attachments-fid a {
+  color:#0678be;
+  font-weight:normal;
+}
+.view-daily-tracking-list label  {
+  width:200px;
+  display:inline-block;
+}
+.view-daily-tracking-list .views-field-field-daily-issues-nid div,
+.view-daily-tracking-list .views-field-field-daily-work-plan-value * {
+  display:inline;
+}
+.view-daily-tracking-list .views-field-field-daily-issues-nid a {
+  color:#0678be;
+  font-weight:normal;
+  margin-right:20px;
+}
+.view-daily-tracking-list .views-field-field-daily-project-status-value {
+  padding:0;
+}
+.view-daily-tracking-list .views-field-field-daily-project-status-value span {
+  display:block;
+  padding:0.5em;
+}
+.Red-status {
+  background:#ffdccd;
+}
+.Green-status {
+  background:#d7ffd8;
+}
+.Yellow-status {
+  background:#ffcf73;
+}
+
+/*Node Edit Page Style*/
+
+#edit-field-issue-dilato-owner-uid-uid-wrapper,
+#edit-field-issue-creator-uid-uid-wrapper,
+#edit-field-issue-status-all-value-wrapper,
+#edit-field-issue-project-nid-nid-wrapper,
+#edit-field-project-phase-value-wrapper,
+#edit-field-project-status-value-wrapper,
+#edit-field-project-project-type-value-wrapper,
+#edit-field-project-dilato-pl-uid-uid-wrapper,
+#edit-field-project-dilato-pm-uid-uid-wrapper,
+#edit-field-project-client-pm-uid-uid-wrapper,
+#edit-field-project-client-uid-uid-wrapper,
+#edit-field-project-product-nid-nid-wrapper,
+#edit-field-project-project-id-0-value-wrapper,
+#edit-field-mi-dilato-owner-uid-uid-wrapper,
+#edit-field-mi-client-pm-uid-uid-wrapper,
+#edit-field-mi-creator-uid-uid-wrapper,
+#edit-field-mi-status-value-wrapper,
+#edit-field-query-submitter-uid-uid-wrapper,
+#edit-field-query-status-value-wrapper,
+#edit-field-query-product-nid-nid-wrapper,
+#edit-field-resource-report-to-uid-uid-wrapper,
+#edit-field-resource-tester-uid-uid-wrapper,
+#edit-field-resource-product-nid-nid-wrapper,
+#edit-field-resource-project-nid-nid-wrapper,
+#edit-field-timesheet-project-nid-nid-wrapper,
+#edit-field-client-product-nid-nid-wrapper,
+#edit-field-client-pm-uid-uid-wrapper,
+#edit-field-client-code-0-value-wrapper,
+#node-form .container-inline-date,
+#edit-field-daily-project-nid-nid-wrapper,
+#edit-field-daily-project-status-value-wrapper,
+#edit-field-daily-issues-nid-nid-wrapper{
+  float:left;
+  margin-right:20px;
+  clear:none;
+}
+#node-form #edit-title-wrapper,
+#node-form #field-project-attachments-items,
+#node-form .body-field-wrapper,
+#node-form fieldset {
+  clear:both;
+}
+#edit-field-project-project-id-0-value-wrapper {
+  margin-bottom:0.8em;
+}
