@@ -142,3 +142,8 @@
 #edit-field-project-project-id-0-value-wrapper {
   margin-bottom:0.8em;
 }
+
+
+.view-project-list .view-footer a {
+  margin-right:20px;
+}
