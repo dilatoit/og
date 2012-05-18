@@ -147,3 +147,9 @@
 .view-project-list .view-footer a {
   margin-right:20px;
 }
+
+/* Primary Menu Style */
+#superfish .menu a, #superfish .menu a:visited {
+  padding-left:20px;
+  padding-right:20px;
+}
