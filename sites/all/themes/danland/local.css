@@ -69,26 +69,26 @@
   font-weight:normal;
   margin-right:20px;
 }
-.view-daily-tracking-list .views-field-field-daily-project-status-value {
-  padding:0;
-}
 .view-daily-tracking-list .views-field-field-daily-project-status-value span {
   display:block;
-  padding:0.5em;
+  width:24px;
+  height:24px;
+  margin-left:40px;
+	text-indent: -999em;
+	font: 0/0 a;
+	color: transparent;
 }
 .Red-status {
-  background:#ffdccd;
+  background:url("images/red.png") no-repeat;
 }
 .Green-status {
-  background:#d7ffd8;
+  background:url("images/green.png") no-repeat;
 }
 .Yellow-status {
-  background:#ffcf73;
+  background:url("images/yellow.png") no-repeat;
 }
 .view-daily-tracking-list .views-field-body {
   max-height:600px;
-  height:auto !important;
-  height:600px;
   width:920px;
   overflow:scroll;
   border:1px solid #ccc;
