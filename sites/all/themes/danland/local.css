@@ -69,21 +69,23 @@
   font-weight:normal;
   margin-right:20px;
 }
-.view-daily-tracking-list .views-field-field-daily-project-status-value span {
+.status {
   display:block;
   width:24px;
   height:24px;
-  margin-left:40px;
 	text-indent: -999em;
 	font: 0/0 a;
 	color: transparent;
 }
+.Warning-status,
 .Red-status {
   background:url("images/red.png") no-repeat;
 }
+.Normal-status,
 .Green-status {
   background:url("images/green.png") no-repeat;
 }
+.Emergence-status,
 .Yellow-status {
   background:url("images/yellow.png") no-repeat;
 }
