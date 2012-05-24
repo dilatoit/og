@@ -1,0 +1,30 @@
+<?php
+/**
+ *  Changing menuitm link depends on site id .
+ */
+
+function danblog_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) {
+  $class = ($menu ? 'expanded' : ($has_children ? 'collapsed' : 'leaf'));
+  if (!empty($extra_class)) {
+    $class .= ' ' . $extra_class;
+  }
+  if ($in_active_trail) {
+    $class .= ' active-trail';
+  }
+  //change link 
+  $user_flag = arg(0);
+  $node_id = arg(1);
+  if (is_numeric($node_id)&&$node_id != 1&&$user_flag != 'user') {
+  	$node = node_load($node_id);
+    if ($node->type == 'site'){
+  	  $link = str_replace("344", $node_id, $link );  
+    }
+    else{
+  	  foreach($node->og_groups as $key => $value){
+  	    $site_id = $key;
+  	  }
+  	$link = str_replace("344", $site_id, $link );
+    }
+  }
+  return '<li class="' . $class . '">' . $link . $menu . "</li>\n";
+}

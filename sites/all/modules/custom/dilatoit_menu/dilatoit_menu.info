@@ -1,0 +1,4 @@
+name = Dilato IT Custom Menu
+discription = Changing menuitm link depends on site id .
+core = 6.x
+package = Dilato IT
