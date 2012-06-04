@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file If user'role is client, the first page will redirect to user'site.
+ *
+ *
+ */
+
+ /**
+ * Implementation of hook_user().
+ */
+function dilatoit_client_redirect_user($op, &$edit, &$account, $category = NULL) {
+  switch ($op) {
+    case 'login':
+    global $user;
+    $flag = in_array("Client", $user->roles);
+    if ($flag) {
+      $group = $user->og_groups;
+      $site_id;
+      foreach ($group as $key => $value) {
+        $site_id = $key;
+      }
+      $url = "node/$site_id";
+      drupal_goto($url);
+    }
+    break;
+  }
+}
