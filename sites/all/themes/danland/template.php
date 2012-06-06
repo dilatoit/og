@@ -35,7 +35,19 @@ function danland_breadcrumb($breadcrumb) {
   $arguments = array_values($arguments);
   $count_array = count($arguments);
   $title = t('Homepage');
-  $path = '<front>';
+  global $user;
+  $roles = $user ->roles;
+  if (in_array("Client", $roles)) {
+    $group = $user->og_groups;
+    $site_id;
+    foreach ($group as $key => $value) {
+      $site_id = $key;
+    }
+    $path = "node/$site_id";
+  }
+  else {
+    $path = '<front>';
+  }
   $links[] = l($title,$path);
   if ($count_array ==4 && $arguments[2] == 'pm') {
     $title = t('Project Management');
@@ -130,6 +142,32 @@ function danland_breadcrumb($breadcrumb) {
       $links[] = l($title,$path);
       $title = "$node->title";
       $links[] = $title;
+    }
+	elseif ($type == 'project') {
+	  if (in_array("Client", $roles)) {
+	    $title = t('Customer Portal');
+		$group = $user->og_groups;
+        $site_id;
+        foreach ($group as $key => $value) {
+          $site_id = $key;
+        }
+        $path = "node/$site_id";
+        $links[] = l($title,$path);
+		$title = "$node->title";
+        $links[] = $title;
+	  }
+	  else {
+	    $title = t('Project Management');
+		$group = $user->og_groups;
+        $site_id;
+        foreach ($group as $key => $value) {
+          $site_id = $key;
+        }
+        $path = "pm/$site_id";
+        $links[] = l($title,$path);
+		$title = "$node->title";
+        $links[] = $title;
+	  }
     }
   }
   // Set custom breadcrumbs
