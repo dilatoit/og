@@ -1,7 +1,0 @@
-name = "PM Administer Book Outlines"
-description = "permission for admining book outlines"
-core = "6.x"
-package = "Features"
-dependencies[] = "book"
-dependencies[] = "features"
-features[user_permission][] = "administer book outlines"

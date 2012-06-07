@@ -1,3 +1,0 @@
-<?php
-
-include_once('pm_project_overview_no_data_links.features.inc');
