@@ -10,7 +10,16 @@ function _dilatoit_lib_add_links($permission) {
 
   $link = '';
   $node_id = arg(1);
-  
+  $node = node_load($node_id);
+  if ($node->type == 'site') {
+  }
+  else {
+    $group = $node->og_groups;
+    $site_id;
+    foreach ($group as $key => $value) {
+      $node_id = $key;
+    }
+  }
   if (user_access($permission)) {
 
     switch ($permission) {
