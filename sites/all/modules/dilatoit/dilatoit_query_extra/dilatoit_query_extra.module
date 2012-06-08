@@ -18,17 +18,3 @@ function dilatoit_query_extra_form_alter(&$form, &$form_state, $form_id) {
     $form['field_query_feedback'] = $array_feedback;
   } 
 }
-
- /**
- * Implementation of hook_menu_alter().
- */
-//function dilatoit_query_extra_menu_alter(&$items) {
-  //$arg_first = arg(0);
-  //$arg_second = arg(1);
-  //if ($arg_first == 'node' && is_numeric($arg_second)){
-    //$node = node_load($arg_second);
-	//if ($node->type = 'query'){
-	  //$items['node/$arg_second/edit']['type'] = MENU_CALLBACK;
-	//}
-  //}
-//}
