@@ -1,0 +1,4 @@
+name = Dilatoit Query Extra
+description = Don't display feedback when adding new query.
+core = 6.x
+package = Dilato IT
