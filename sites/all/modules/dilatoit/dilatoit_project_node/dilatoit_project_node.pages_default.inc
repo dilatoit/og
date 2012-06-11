@@ -253,7 +253,7 @@ function dilatoit_project_node_default_page_manager_handlers() {
         0 => 'argument_nid_1.nid',
       ),
       'override_title' => 1,
-      'override_title_text' => 'Project Daily Report',
+      'override_title_text' => 'Previous Reports',
     );
     $pane->cache = array();
     $pane->style = array(
