@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_node_info().
  */
-function dilatoit_daily_report_node_info() {
+function dilatoit_daily_tracking_node_info() {
   $items = array(
     'daily_tracking' => array(
       'name' => t('Daily Tracking'),

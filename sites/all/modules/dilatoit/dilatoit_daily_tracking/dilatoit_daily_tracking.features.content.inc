@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_content_default_fields().
  */
-function dilatoit_daily_report_content_default_fields() {
+function dilatoit_daily_tracking_content_default_fields() {
   $fields = array();
 
   // Exported field: field_daily_approve
