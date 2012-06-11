@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_views_default_views().
  */
-function dilatoit_project_overview_view_views_default_views() {
+function dilatoit_project_overview_views_views_default_views() {
   $views = array();
 
   // Exported view: mangement_issue_list
@@ -1654,6 +1654,11 @@ return $output;
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
+    'field_query_status_value' => array(
+      'id' => 'field_query_status_value',
+      'table' => 'node_data_field_query_status',
+      'field' => 'field_query_status_value',
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -2084,6 +2089,69 @@ return _dilatoit_lib_add_links(\'create query content\');
     'name' => 'navigation',
   ));
   $handler = $view->new_display('block', 'Query Overview (B)', 'block_1');
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'query' => 'query',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'field_query_status_value_many_to_one' => array(
+      'operator' => 'or',
+      'value' => array(
+        3 => '3',
+      ),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'field_query_status_value_many_to_one_op',
+        'identifier' => 'query_status',
+        'label' => 'Status',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'id' => 'field_query_status_value_many_to_one',
+      'table' => 'node_data_field_query_status',
+      'field' => 'field_query_status_value_many_to_one',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'field_query_status_value' => array(
+      'operator' => '!=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+        'optional' => FALSE,
+      ),
+      'case' => 1,
+      'id' => 'field_query_status_value',
+      'table' => 'node_data_field_query_status',
+      'field' => 'field_query_status_value',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
   $handler->override_option('header_empty', 1);
   $handler->override_option('footer_empty', 0);
   $handler->override_option('empty', '<?php
