@@ -1,4 +1,4 @@
-name = "dilatoit_daily_tracking_list"
+name = "Dilatoit Daily Tracking List"
 description = "This contains a view:dilatoit_daily_tracking_list"
 core = "6.x"
 package = "Features"

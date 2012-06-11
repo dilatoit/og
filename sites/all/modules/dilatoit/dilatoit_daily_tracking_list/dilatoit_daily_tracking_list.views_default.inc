@@ -2768,6 +2768,25 @@ return _dilatoit_lib_add_links(\'create daily_tracking content\');
         'button' => 'Use default',
       ),
     ),
+    'field_daily_approve_value' => array(
+      'operator' => '=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+        'optional' => FALSE,
+      ),
+      'case' => 0,
+      'id' => 'field_daily_approve_value',
+      'table' => 'node_data_field_daily_approve',
+      'field' => 'field_daily_approve_value',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'role',
