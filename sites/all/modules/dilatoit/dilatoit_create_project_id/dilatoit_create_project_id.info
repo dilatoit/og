@@ -1,0 +1,4 @@
+name = Dilatoit Create Porject ID
+description = ADD Porject ID like client + year + ID.
+core = 6.x
+package = Dilato IT
