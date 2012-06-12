@@ -27,6 +27,8 @@ if (drupal_is_front_page()) {
 * Override theme_breadcrumb().
 */
 function danland_breadcrumb($breadcrumb) {
+  global $user;
+  $roles = $user ->roles;
   $links = array();
   $title = '';
   $path = '';
@@ -34,20 +36,22 @@ function danland_breadcrumb($breadcrumb) {
   $arguments = explode('/', request_uri());
   $arguments = array_values($arguments);
   $count_array = count($arguments);
-  $title = t('Homepage');
-  global $user;
-  $roles = $user ->roles;
-  if (in_array("Client", $roles)) {
-    $group = $user->og_groups;
-    $site_id;
-    foreach ($group as $key => $value) {
-      $site_id = $key;
-    }
-    $path = "node/$site_id";
+  $arg = $arguments[3];
+  $node = node_load($arg);
+  if ($node->type == 'site') {
+     $site_id = $arg;
   }
   else {
-    $path = '<front>';
+    $group = $node->og_groups;
+	if(isset($group)){
+	  foreach ($group as $key => $value) {
+      $site_id = $key;
+      }
+	}
   }
+  $site = node_load($site_id);
+  $title = t($site->title);
+  $path = "node/$site->nid";
   $links[] = l($title,$path);
   if ($count_array ==4 && $arguments[2] == 'pm') {
     $title = t('Project Management');
@@ -160,9 +164,11 @@ function danland_breadcrumb($breadcrumb) {
 	    $title = t('Project Management');
 		$group = $user->og_groups;
         $site_id;
-        foreach ($group as $key => $value) {
+		if (isset($group)) {
+		  foreach ($group as $key => $value) {
           $site_id = $key;
-        }
+          }
+		}
         $path = "pm/$site_id";
         $links[] = l($title,$path);
 		$title = "$node->title";
