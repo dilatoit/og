@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_views_default_views().
  */
-function dilatoit_project_overview_views_views_default_views() {
+function dilatoit_project_overview_view_views_default_views() {
   $views = array();
 
   // Exported view: mangement_issue_list
@@ -387,7 +387,67 @@ return _dilatoit_lib_add_links(\'create management_issue content\');
 ?>');
   $handler->override_option('footer_format', '4');
   $handler->override_option('footer_empty', 0);
-  $handler->override_option('empty', '<?php
+  $handler->override_option('empty', '<div class="view-content">
+      <table class="views-table cols-4">
+    <thead>
+    <tr>
+              <th class="views-field views-field-title">
+          Title        </th>
+              <th class="views-field views-field-field-mi-dilato-owner-uid">
+          Dilato Owner        </th>
+              <th class="views-field views-field-field-mi-due-date-value">
+          Due Date        </th>
+              <th class="views-field views-field-field-mi-status-value">
+          Status        </th>
+          </tr>
+  </thead>
+  <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/349"></a>          </td>
+                  <td class="views-field views-field-field-mi-dilato-owner-uid">
+            No data!
+            </td>
+                  <td class="views-field views-field-field-mi-due-date-value">
+            <span class="date-display-single"></span>          </td>
+                  <td class="views-field views-field-field-mi-status-value">
+             </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/350"></a>          </td>
+                  <td class="views-field views-field-field-mi-dilato-owner-uid">
+            </td>
+                  <td class="views-field views-field-field-mi-due-date-value">
+            <span class="date-display-single"></span>          </td>
+                  <td class="views-field views-field-field-mi-status-value">
+            </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/371"></a>          </td>
+                  <td class="views-field views-field-field-mi-dilato-owner-uid">
+            </td>
+                  <td class="views-field views-field-field-mi-due-date-value">
+            <span class="date-display-single"></span>          </td>
+                  <td class="views-field views-field-field-mi-status-value">
+            </td>
+              </tr>
+          <tr class="even views-row-last">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/352"></a>          </td>
+                  <td class="views-field views-field-field-mi-dilato-owner-uid">
+            </td>
+                  <td class="views-field views-field-field-mi-due-date-value">
+            <span class="date-display-single"></span>          </td>
+                  <td class="views-field views-field-field-mi-status-value">
+            </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+
+<?php
 return _dilatoit_lib_add_links(\'create management_issue content\');
 ?>');
   $handler->override_option('empty_format', '4');
@@ -1418,7 +1478,72 @@ return $output;
 ?>');
   $handler->override_option('footer_format', '4');
   $handler->override_option('footer_empty', 0);
-  $handler->override_option('empty', '<?php
+  $handler->override_option('empty', '<div class="view-content">
+    <table class="views-table cols-4">
+        <thead>
+            <tr>
+              <th class="views-field views-field-title">    Title        </th>
+              <th class="views-field views-field-title-1"> Product        </th>
+              <th class="views-field views-field-field-project-phase-value">  Phase        </th>
+              <th class="views-field views-field-field-project-status-value">   Status        </th>
+          </tr>
+  </thead>
+  <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/345"></a>          </td>
+                  <td class="views-field views-field-title-1">
+            <a href="/og/node/348"></a> No data!    </td>
+                  <td class="views-field views-field-field-project-phase-value">
+            </td>
+                  <td class="views-field views-field-field-project-status-value">
+            <span class="Emergence-status status"></span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/346">   </a>          </td>
+                  <td class="views-field views-field-title-1">
+            <a href="/og/node/348">  </a>      </td>
+                  <td class="views-field views-field-field-project-phase-value">
+            </td>
+                  <td class="views-field views-field-field-project-status-value">
+            <span class="Warning-status status"></span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/393"></a>          </td>
+                  <td class="views-field views-field-title-1">
+            <a href="/og/node/348"></a>      </td>
+                  <td class="views-field views-field-field-project-phase-value">
+            </td>
+                  <td class="views-field views-field-field-project-status-value">
+            <span class="Warning-status status"></span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/366"></a>          </td>
+                  <td class="views-field views-field-title-1">
+            <a href="/og/node/348"></a>     </td>
+                  <td class="views-field views-field-field-project-phase-value">
+            </td>
+                  <td class="views-field views-field-field-project-status-value">
+            <span class="Normal-status status"></span>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/409"></a>          </td>
+                  <td class="views-field views-field-title-1">
+            <a href="/og/node/396"></a>     </td>
+                  <td class="views-field views-field-field-project-phase-value">
+            </td>
+                  <td class="views-field views-field-field-project-status-value">
+            <span class="Normal-status status"></span>          </td>
+              </tr>
+   </tbody>
+  </table>
+</div>
+  
+<?php
 $output = _dilatoit_lib_add_links(\'create project content\');
 $output .= _dilatoit_lib_add_links(\'create product content\');
 return $output;
@@ -2154,7 +2279,56 @@ return _dilatoit_lib_add_links(\'create query content\');
   ));
   $handler->override_option('header_empty', 1);
   $handler->override_option('footer_empty', 0);
-  $handler->override_option('empty', '<?php
+  $handler->override_option('empty', '	<div class="view-content">
+      <table class="views-table cols-3">
+    <thead>
+    <tr>
+              <th class="views-field views-field-title">
+          Name        </th>
+              <th class="views-field views-field-title-1">
+          Product        </th>
+              <th class="views-field views-field-field-query-status-value">
+          Status        </th>
+          </tr>
+  </thead>
+  <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/355"></a>          </td>
+                  <td class="views-field views-field-title-1">
+            No data!          </td>
+                  <td class="views-field views-field-field-query-status-value">
+            </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/356"></a>          </td>
+                  <td class="views-field views-field-title-1">
+            <a href="/og/node/348"></a>          </td>
+                  <td class="views-field views-field-field-query-status-value">
+            </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/357"></a>          </td>
+                  <td class="views-field views-field-title-1">
+            <a href="/og/node/348"></a>          </td>
+                  <td class="views-field views-field-field-query-status-value">
+            </td>
+              </tr>
+          <tr class="even views-row-last">
+                  <td class="views-field views-field-title">
+            <a href="/og/node/425"></a>          </td>
+                  <td class="views-field views-field-title-1">
+            <a href="/og/node/392"></a>          </td>
+                  <td class="views-field views-field-field-query-status-value">
+            </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+
+<?php
 return _dilatoit_lib_add_links(\'create query content\');
 ?>');
   $handler->override_option('empty_format', '4');
