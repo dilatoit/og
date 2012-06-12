@@ -1,0 +1,3 @@
+<?php
+
+include_once('dilatotit_daily_report_page.features.inc');
