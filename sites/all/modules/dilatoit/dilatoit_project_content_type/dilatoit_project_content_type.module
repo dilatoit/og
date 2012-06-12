@@ -1,0 +1,3 @@
+<?php
+
+include_once('dilatoit_project_content_type.features.inc');
