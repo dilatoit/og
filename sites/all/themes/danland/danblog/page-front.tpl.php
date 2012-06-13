@@ -196,7 +196,7 @@
 </div> <!-- end footer wrapper -->
 
 <div style="clear:both"></div>
-<div id="notice"><p>Theme by <a href="http://www.danetsoft.com">Danetsoft</a> and <a href="http://www.danpros.com">Danang Probo Sayekti</a> inspired by <a href="http://www.maksimer.no">Maksimer</a></p></div>
+<div id="notice">Copyright @ 2012 <a href="http://www.dilatoit.com">Dilato Innovative Technology Limited</a>  All Rights Reserved |  <a href="http://www.dilatoit.com/privacy-policy">Privacy Policy</a></div>
 <?php print $closure; ?>
 </body>
 </html>
