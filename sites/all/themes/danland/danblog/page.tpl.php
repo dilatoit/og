@@ -193,7 +193,7 @@
 </div> <!-- end footer wrapper -->
 
 <div style="clear:both"></div>
-<div id="notice"><p>Supported by <a href="http://www.dilatoit.com">Dilato IT</a></p></div>
+<div id="notice">Copyright @ 2012 <a href="http://www.dilatoit.com">Dilato Innovative Technology Limited</a>  All Rights Reserved |  <a href="http://www.dilatoit.com/privacy-policy">Privacy Policy</a></div>
 <?php print $closure; ?>
 </body>
 </html>
