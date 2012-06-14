@@ -148,9 +148,14 @@
   margin-bottom:0.8em;
 }
 
-
+.view-project-list .view-empty a,
 .view-project-list .view-footer a {
   margin-right:20px;
+}
+
+.view-daily-tracking-list .views-field-field-daily-project-status-value .views-label-field-daily-project-status-value,
+.view-daily-tracking-list .views-field-field-daily-project-status-value .field-content {
+  float:left;
 }
 
 /* Primary Menu Style */
