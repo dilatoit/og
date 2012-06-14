@@ -60,9 +60,11 @@
   width:200px;
   display:inline-block;
 }
-.view-daily-tracking-list .views-field-field-daily-issues-nid div,
-.view-daily-tracking-list .views-field-field-daily-work-plan-value * {
+.view-daily-tracking-list .views-field-field-daily-issues-nid div {
   display:inline;
+}
+.view-daily-tracking-list .views-label-field-daily-work-plan-value {
+  font-weight:bold;
 }
 .view-daily-tracking-list .views-field-field-daily-issues-nid a {
   color:#0678be;
@@ -154,4 +156,8 @@
 #superfish .menu a, #superfish .menu a:visited {
   padding-left:20px;
   padding-right:20px;
+}
+#superfish .menu li li a, #superfish .menu li li a:visited {
+  padding-left:10px;
+  padding-right:10px;
 }
