@@ -100,6 +100,7 @@
 }
 
 /*Node Edit Page Style*/
+#edit-field-daily-approve-value-wrapper,
 #edit-field-query-assign-to-uid-uid-wrapper,
 #edit-field-issue-dilato-owner-uid-uid-wrapper,
 #edit-field-issue-creator-uid-uid-wrapper,
@@ -131,12 +132,12 @@
 #edit-field-client-code-0-value-wrapper,
 #node-form .container-inline-date,
 #edit-field-daily-project-nid-nid-wrapper,
-#edit-field-daily-project-status-value-wrapper,
-#edit-field-daily-issues-nid-nid-wrapper{
+#edit-field-daily-project-status-value-wrapper {
   float:left;
   margin-right:20px;
   clear:none;
 }
+#edit-field-daily-issues-nid-nid-wrapper,
 #node-form #edit-title-wrapper,
 #node-form #field-project-attachments-items,
 #node-form .body-field-wrapper,
