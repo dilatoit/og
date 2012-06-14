@@ -150,7 +150,13 @@
 
 .view-project-list .view-empty a,
 .view-project-list .view-footer a {
-  margin-right:20px;
+  background:#EEEEEE;
+  border: 1px solid #CCCCCC;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 5px 10px;
 }
 
 .view-daily-tracking-list .views-field-field-daily-project-status-value .views-label-field-daily-project-status-value,
