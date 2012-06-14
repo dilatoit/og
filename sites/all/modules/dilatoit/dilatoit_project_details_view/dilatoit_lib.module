@@ -1,0 +1,57 @@
+<?php
+/**
+ * @file Main file of DilatoIT Library Module.
+ */
+
+/**
+ * Check user access by permission
+ */
+function _dilatoit_lib_add_links($permission) {
+
+  $link = '';
+  $node_id = arg(1);
+  $node = node_load($node_id);
+  if ($node->type == 'site') {
+  }
+  else {
+    $group = $node->og_groups;
+    $site_id;
+    foreach ($group as $key => $value) {
+      $node_id = $key;
+    }
+  }
+  if (user_access($permission)) {
+
+    switch ($permission) {
+      case 'create project content':
+        $link = l(t('New Project'), 'node/add/project', array('query' => 'gids[]=' . $node_id));
+        break;
+      case 'create product content':
+        $link = l(t('New Product'), 'node/add/product', array('query' => 'gids[]=' . $node_id));
+        break;
+      case 'create management_issue content':
+        $link = l(t('New Management Issue'), 'node/add/management-issue', array('query' => 'gids[]=' . $node_id));
+        break;
+      case 'create query content':
+        $link = l(t('New Query'), 'node/add/query', array('query' => 'gids[]=' . $node_id));
+        break;
+      case 'create daily_tracking content':
+        $link = l(t('New Report'), 'node/add/daily-tracking', array('query' => 'gids[]=' . $node_id));
+        break;
+      case 'create resource_assignment content':
+        $link = l(t('New Resource Assignment'), 'node/add/resource-assignment', array('query' => 'gids[]=' . $node_id));
+        break;
+      case 'create time_sheet content':
+        $link = l(t('New Timesheet'), 'node/add/time-sheet', array('query' => 'gids[]=' . $node_id));
+        break;
+      case 'create issue content':
+        $link = l(t('New Issue'), 'node/add/issue', array('query' => 'gids[]=' . $node_id));
+        break;
+      case 'create book content':
+        $link = l(t('New Book page'), 'node/add/book', array('query' => 'gids[]=' . $node_id));
+        break;
+    }
+  }
+
+  return $link;
+}
