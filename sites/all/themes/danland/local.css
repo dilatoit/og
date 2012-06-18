@@ -60,9 +60,11 @@
   width:200px;
   display:inline-block;
 }
-.view-daily-tracking-list .views-field-field-daily-issues-nid div,
-.view-daily-tracking-list .views-field-field-daily-work-plan-value * {
+.view-daily-tracking-list .views-field-field-daily-issues-nid div {
   display:inline;
+}
+.view-daily-tracking-list .views-label-field-daily-work-plan-value {
+  font-weight:bold;
 }
 .view-daily-tracking-list .views-field-field-daily-issues-nid a {
   color:#0678be;
@@ -98,6 +100,7 @@
 }
 
 /*Node Edit Page Style*/
+#edit-field-daily-approve-value-wrapper,
 #edit-field-query-assign-to-uid-uid-wrapper,
 #edit-field-issue-dilato-owner-uid-uid-wrapper,
 #edit-field-issue-creator-uid-uid-wrapper,
@@ -129,12 +132,12 @@
 #edit-field-client-code-0-value-wrapper,
 #node-form .container-inline-date,
 #edit-field-daily-project-nid-nid-wrapper,
-#edit-field-daily-project-status-value-wrapper,
-#edit-field-daily-issues-nid-nid-wrapper{
+#edit-field-daily-project-status-value-wrapper {
   float:left;
   margin-right:20px;
   clear:none;
 }
+#edit-field-daily-issues-nid-nid-wrapper,
 #node-form #edit-title-wrapper,
 #node-form #field-project-attachments-items,
 #node-form .body-field-wrapper,
@@ -145,13 +148,29 @@
   margin-bottom:0.8em;
 }
 
-
+.view-project-list .view-empty a,
 .view-project-list .view-footer a {
-  margin-right:20px;
+  background:#EEEEEE;
+  border: 1px solid #CCCCCC;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  text-decoration:none;
+}
+
+.view-daily-tracking-list .views-field-field-daily-project-status-value .views-label-field-daily-project-status-value,
+.view-daily-tracking-list .views-field-field-daily-project-status-value .field-content {
+  float:left;
 }
 
 /* Primary Menu Style */
 #superfish .menu a, #superfish .menu a:visited {
   padding-left:20px;
   padding-right:20px;
+}
+#superfish .menu li li a, #superfish .menu li li a:visited {
+  padding-left:10px;
+  padding-right:10px;
 }
